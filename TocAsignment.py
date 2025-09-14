@@ -1,5 +1,3 @@
-# DFA Access Control System for Smart Building
-# Step 3: Implementation as per assignment requirements
 
 # Define authentication symbols (Σ)
 symbols = {"CD", "FP", "RT", "PN", "FC", "VC", "BC", "AO"}
@@ -17,7 +15,6 @@ zone_sequences = {
 }
 
 # Build DFA transition function
-# States will be numbered: q0 (start), q1,q2,...; q_reject as special
 transitions = {}
 accepting_states = {}
 
@@ -69,9 +66,7 @@ def dfa_simulate(input_sequence):
     else:
         return "Access Denied"
 
-# --------------------------
 # Example Runs
-# --------------------------
 tests = [
     ["CD", "PN", "FC", "FP"],  # LO correct
     ["FP", "RT", "BC", "AO"],  # SR correct
